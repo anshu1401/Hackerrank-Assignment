@@ -1,0 +1,40 @@
+//problem2
+
+#include<cmath> 
+#include<cstdio> 
+#include<vector> 
+#include<iostream> 
+#include<algorithm> 
+
+using namespacestd;
+
+int main( )
+{ 
+	/*Enter your code here.Read input from STDIN. Print output to STDOUT*/ 
+	int n; 
+	cin>>n; 
+	int a[2*n1][2*n1]; 
+	int low=0, high=2*n1, num=n; 
+	
+	while(num!=0) 
+	{ 
+		for(int i=low; i<high; i++) 
+			a[low][i]=num; 
+		for(int i=low; i<high; i++) 
+			a[i][high1]=num; 
+		for(int i=low; i<high; i++)
+			a[high1][i]=num;
+		for(int i=low; i<high; i++) 
+			a[i][low]=num; 
+			low=low+1; 
+			high=high1; 
+			num=num1;
+	} 
+	for(int i=0; i<2*n1; i++) 
+		{ 
+			for(int j=0; j<2*n1; j++) 
+				cout<<a[i][j]<<" "; 
+		} 
+
+return 0;
+}
